@@ -47,7 +47,7 @@ while(True):
     (x,y),radius = cv2.minEnclosingCircle(approx)
     center = (int(x),int(y))
     radius = int(radius)
-    cv2.circle(im_gray,center,radius,(0,255,0),2)
+    cv2.circle(img,center,radius,(0,255,0),2)
 
     cv2.moveWindow("mask", 1,800)    
     cv2.imshow("mask", fgmask)
@@ -56,7 +56,7 @@ while(True):
     cv2.imshow("cam", img)
     
     cv2.moveWindow("thr", 600,1)    
-    cv2.imshow("thr", im_gray)
+    cv2.imshow("thr", thresh2)
 
 #    cv2.imshow("blur", im_blur)
 
